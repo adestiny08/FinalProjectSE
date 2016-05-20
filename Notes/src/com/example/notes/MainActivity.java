@@ -1,4 +1,38 @@
+/*
+WOWW             WOW             WOWW             WOWWOWWOWWOWWOWWOWWOWWOW      WOWW             WOW             WOWW      !!!!!      !!!!!
+WOWW            WOWW            WOWW             WOWWOWWOWWOWWOWWOWWOWWOW       WOWW            WOWW            WOWW      !!!!!      !!!!!
+WOWW           WOWWO           WOWW             WOWWOW            WOWWOW        WOWW           WOWWO           WOWW      !!!!!      !!!!!
+WOWW          WOWWOW          WOWW             WOWWOW            WOWWOW         WOWW          WOWWOW          WOWW      !!!!!      !!!!!
+WOWW         WOWWWOW         WOWW             WOWWOW            WOWWOW          WOWW         WOWWWOW         WOWW      !!!!!      !!!!!
+WOWW        WOWWOWWO        WOWW             WOWWOW            WOWWOW           WOWW        WOWWOWWO        WOWW      !!!!!      !!!!!
+WOWW       WOWW WWOW       WOWW             WOWWOW            WOWWOW            WOWW       WOWW WWOW       WOWW      !!!!!      !!!!!
+WOWW      WOWW  WWOW      WOWW             WOWWOW            WOWWOW             WOWW      WOWW  WWOW      WOWW      !!!!!      !!!!!
+WOWW     WOWW   WWOW     WOWW             WOWWOW            WOWWOW              WOWW     WOWW   WWOW     WOWW      !!!!!      !!!!!
+WOWW    WOWW    WWOW    WOWW             WOWWOW            WOWWOW               WOWW    WOWW    WWOW    WOWW      !!!!!      !!!!!
+WOWW   WOWW     WWOW   WOWW             WOWWOW            WOWWOW                WOWW   WOWW     WWOW   WOWW      !!!!!      !!!!!
+WOWW  WOWW      WWOW  WOWW             WOWWOW            WOWWOW                 WOWW  WOWW      WWOW  WOWW      !!!!!      !!!!!
+WOWW WOWW       WWOW WOWW             WOWWOW            WOWWOW                  WOWW WOWW       WWOW WOWW      !!!!!      !!!!!
+WOWWOWWO        WWOWWOWW             WOWWOW            WOWWOW                   WOWWOWWO        WWOWWOWW      !!!!!      !!!!!
+WOWWOWW         WWOWWOW             WOWWOW            WOWWOW                    WOWWOWW         WWOWWOW
+WOWWOW          WWOWWO             WOWWOW            WOWWOW                     WOWWOW          WWOWWO
+WOWWO           OWWOW             WOWWOWWOWWOWWOWWOWWOWWOW                      WOWWO           OWWOW      !!!!!      !!!!!
+WOWW            OWWO             WOWWOWWOWWOWWOWWOWWOWWOW                       WOWW            OWWO      !!!!!      !!!!!
+*****************************************************
+* WOW WOW WOW group : NOTES & REMINDERS             *
+*                     member                        *
+* Miss  Nattida     Boonpae            56070501097  *
+* MR.   Thanawat    Wongpuak           56070501098  *
+* Miss  Panussaya   Sathitchaiwattana  56070501099  *
+* MR.   Pacharapon  Leewanitchakul     56070501100  *
+*****************************************************
+*/
 package com.example.notes;
+
+// ######  ###     ###  #####    ####   #####  ######
+//   ##    ####   ####  ##  ##  ##  ##  ##  ##   ##
+//   ##    ## ## ## ##  #####   ##  ##  #####    ##
+//   ##    ##  ###  ##  ##      ##  ##  ##  ##   ##
+// ######  ##   #   ##  ##       ####   ##   ##  ##
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -15,6 +49,13 @@ import android.widget.CalendarView.OnDateChangeListener;
 import android.widget.EditText;
 import android.widget.Toast;
 
+//  ######  ##   ##  ###   ##   #####  ######  ######   ####   ###   ##
+//  ##      ##   ##  ####  ##  ##   ##   ##      ##    ##  ##  ####  ##
+//  ####    ##   ##  ## ## ##  ##        ##      ##    ##  ##  ## ## ##
+//  ##      ##   ##  ##  ####  ##   ##   ##      ##    ##  ##  ##  ####
+//  ##       #####   ##   ###   #####    ##      ##     ####   ##   ###
+
+// Some function I will not description,because i was comment it at pevious class
 public class MainActivity extends Activity {
 	CalendarView calendar;
 	private DBHelper mydb;
@@ -25,11 +66,11 @@ public class MainActivity extends Activity {
 		
 		//initializes the calendarview
 		mydb = new DBHelper(this);
-		initializeCalendar();
+		initializeCalendar();    // Setup Calendar
 	}
 	
 	public void initializeCalendar() {
-		calendar = (CalendarView) findViewById(R.id.calendar);
+		calendar = (CalendarView) findViewById(R.id.calendar);  // Look id 'Calendar'
 
 		// sets whether to show the week number.
 		calendar.setShowWeekNumber(false);
@@ -58,17 +99,17 @@ public class MainActivity extends Activity {
 				Toast.makeText(getApplicationContext(), day + "/" + (month+1) + "/" + year, Toast.LENGTH_LONG).show();
 				Intent i = new Intent(getApplicationContext(), MenuActivity.class);
 				i.putExtra("Year", year);
-				i.putExtra("Month", month+1);
+				i.putExtra("Month", month+1); // month start at 0 but we want it to start at 1
 				i.putExtra("Day", day);
 				startActivity(i);
 			}
 		});
 	}
-	
+	// *top-right dot on the screen is SETTING menu* not comment about code * just explain
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.menu, menu);
+		getMenuInflater().inflate(R.menu.menu, menu); 
 		return true;
 	}
 
@@ -76,28 +117,28 @@ public class MainActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		 // Handle item selection
 	    switch (item.getItemId()) {
-	        case R.id.total_month:
+	        case R.id.total_month:     // Menu=> total Month
 	        	showMonthDialog();
 	            return true;
-	        case R.id.total_year:
+	        case R.id.total_year:      // Menu=> total year
 	        	showYearDialog();
 	            return true;
-	        case R.id.total_all:
+	        case R.id.total_all:       // Menu=> total all
 	        	showAllDialog();
 	            return true;
 	        default:
 	            return super.onOptionsItemSelected(item);
 	    }
 	}
-	
+	// showMonthDialog();  ,  showYearDialog();  ,  showAllDialog();  => 3 class is similar to eachother
 	private void showMonthDialog() {
 		
 		LayoutInflater li = LayoutInflater.from(this);
 		View promptsView = li.inflate(R.layout.dialog, null);
 		
         AlertDialog.Builder showmonth = new AlertDialog.Builder(this);
-        final EditText inputmonth = (EditText) promptsView.findViewById(R.id.inputmonth);
-        final EditText inputyear = (EditText) promptsView.findViewById(R.id.inputyear);
+        final EditText inputmonth = (EditText) promptsView.findViewById(R.id.inputmonth); // input month in dialog
+        final EditText inputyear = (EditText) promptsView.findViewById(R.id.inputyear);   // input year in dialog
         showmonth.setTitle("ระบุเดือนและปีที่ต้องการแสดง(ตัวเลข)");
         showmonth.setView(promptsView);
 
@@ -110,9 +151,9 @@ public class MainActivity extends Activity {
                     	int month = Integer.parseInt(inputmonth.getText().toString());
                     	int year = Integer.parseInt(inputyear.getText().toString());
                     	int value = mydb.getResultMonthAudit(year, month).intValue();
-                    	Log.d("Month", "Result "+Integer.toString(value));
-                    	dialog.dismiss();
-                    	showAudit(value);
+                    	//Log.d("Month", "Result "+Integer.toString(value));
+                    	dialog.dismiss(); // dialog disappear
+                    	showAudit(value); // Popup to show values
                     }       
                 }
         );
