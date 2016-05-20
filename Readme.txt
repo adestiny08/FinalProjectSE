@@ -1,10 +1,10 @@
 *****************************************************
-* WOW WOW WOW group	: NOTES & REMINDERS				*
-*						member						*
-* Miss	Nattida		Boonpae				56070501097 *
-* MR.	Thanawat	Wongpuak			56070501098 *
-* Miss	Panussaya	Sathitchaiwattana	56070501099 *
-* MR.	Pacharapon	Leewanitchakul		56070501100 *
+* WOW WOW WOW group	: NOTES & REMINDERS	            *
+*                     member					        	    *
+* Miss  Nattida     Boonpae            56070501097  *
+* MR.   Thanawat    Wongpuak           56070501098  *
+* Miss  Panussaya   Sathitchaiwattana  56070501099  *
+* MR.   Pacharapon  Leewanitchakul     56070501100  *
 *****************************************************
 * Please read it in GITHUB at "Spaces/4/No wrap".   *
 *                       ***                         *
