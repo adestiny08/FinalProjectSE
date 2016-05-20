@@ -1,6 +1,6 @@
 *****************************************************
-* WOW WOW WOW group	: NOTES & REMINDERS	            *
-*                     member					        	    *
+* WOW WOW WOW group	: NOTES & REMINDERS             *
+*                     member                        *
 * Miss  Nattida     Boonpae            56070501097  *
 * MR.   Thanawat    Wongpuak           56070501098  *
 * Miss  Panussaya   Sathitchaiwattana  56070501099  *
